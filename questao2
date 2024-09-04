@@ -1,0 +1,21 @@
+void main() {
+  String input = "Aqui vai ter bastante letra A"; // Defina sua string aqui
+
+  int count = countOccurrencesOfA(input);
+
+  if (count > 0) {
+    print('A letra "a" aparece $count vez(es) na string.');
+  } else {
+    print('A letra "a" não aparece na string.');
+  }
+}
+
+int countOccurrencesOfA(String input) {
+  int count = 0;
+  for (int i = 0; i < input.length; i++) {
+    if (input[i].toLowerCase() == 'a') {
+      count++;
+    }
+  }
+  return count;
+}

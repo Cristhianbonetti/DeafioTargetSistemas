@@ -1,0 +1,21 @@
+void main() {
+  int numero = 21; // Defina o número que você quer testar aqui
+
+  if (isFibonacci(numero)) {
+    print('O número $numero pertence à sequência de Fibonacci.');
+  } else {
+    print('O número $numero não pertence à sequência de Fibonacci.');
+  }
+}
+
+bool isFibonacci(int n) {
+  if (n < 0) return false;
+
+  int a = 0, b = 1;
+  while (b < n) {
+    int temp = a;
+    a = b;
+    b = temp + b;
+  }
+  return b == n || n == 0;
+}
